@@ -1,0 +1,17 @@
+{
+  "name": "electron-proxy",
+  "version": "1.0.0",
+  "description": "Electron and proxy server",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Gaurish",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^15.1.2"
+  },
+  "dependencies": {
+    "http-mitm-proxy": "^0.9.0"
+  }
+}
