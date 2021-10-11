@@ -11,13 +11,13 @@ function mainWindow() {
   appWindow.once("ready-to-show", () => {
     appWindow.show();
   });
-
 }
 
 function backgroundWindow() {
   let backgroundWindow = new BrowserWindow({
     width: 300,
     height: 275,
+    show: false,
     // frame: false,
   });
 
@@ -25,10 +25,9 @@ function backgroundWindow() {
   var proxy = Proxy();
   proxy.listen({ port: 8081 });
 
-  backgroundWindow.loadFile("background.html");
-  backgroundWindow.once("ready-to-show", () => {
-    backgroundWindow.hide();
-  });
+  // backgroundWindow.once("ready-to-show", () => {
+  //     backgroundWindow.hide();
+  // });
 
   backgroundWindow.on("closed", () => {
     backgroundWindow = null;
